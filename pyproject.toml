@@ -1,19 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
 name = "canvas-tracker"
 version = "0.1.0"
-description = "Add your description here"
+description = "CLI tool that shows your upcoming Canvas assignments every time you open your terminal"
 readme = "README.md"
-authors = [
-    { name = "kagastyaraju", email = "kagastyaraju@ucsd.edu" }
-]
-requires-python = ">=3.13"
+requires-python = ">=3.9"
 dependencies = [
-    "click>=8.4.1",
-    "icalendar>=7.1.2",
-    "requests>=2.34.2",
-    "rich>=15.0.0",
+    "click>=8.1",
+    "icalendar>=6.0",
+    "requests>=2.31",
+    "rich>=13.0",
 ]
 
-[build-system]
-requires = ["uv_build>=0.11.8,<0.12.0"]
-build-backend = "uv_build"
+[project.scripts]
+canvas-tracker = "canvas_tracker.cli:main"
